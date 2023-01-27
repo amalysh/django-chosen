@@ -1,6 +1,8 @@
+from __future__ import absolute_import
 from django import forms
 from django.conf import settings
 from django.utils.translation import get_language_bidi
+import six
 
 __all__ = ['ChosenWidgetMixin', 'ChosenSelect', 'ChosenSelectMultiple',
         'ChosenGroupSelect']
@@ -30,10 +32,10 @@ class ChosenWidgetMixin(object):
     def add_to_css_class(self, classes, new_class):
         new_classes = classes
         try:
-            classes_test = u" " + unicode(classes) + u" "
-            new_class_test = u" " + unicode(new_class) + u" "
+            classes_test = u" " + six.text_type(classes) + u" "
+            new_class_test = u" " + six.text_type(new_class) + u" "
             if new_class_test not in classes_test:
-                new_classes += u" " + unicode(new_class)
+                new_classes += u" " + six.text_type(new_class)
         except TypeError:
             pass
         return new_classes

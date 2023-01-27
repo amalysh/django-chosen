@@ -1,6 +1,7 @@
 # flake8: noqa
-import fields
-from fields import *
+from __future__ import absolute_import
+from . import fields
+from .fields import *
 
-import widgets
-from widgets import *
+from . import widgets
+from .widgets import *

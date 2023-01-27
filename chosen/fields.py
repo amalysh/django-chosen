@@ -1,6 +1,7 @@
+from __future__ import absolute_import
 from django import forms
 
-from widgets import ChosenSelect, ChosenSelectMultiple, ChosenGroupSelect
+from .widgets import ChosenSelect, ChosenSelectMultiple, ChosenGroupSelect
 
 __all__ = [
     'ChosenFieldMixin', 'ChosenChoiceField', 'ChosenMultipleChoiceField',
