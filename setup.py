@@ -14,7 +14,7 @@ setup(
     description='django FormFields using the Chosen javascript plugin for jQuery',
     author='Frankie Dintino',
     author_email='fdintino@theatlantic.com',
-    url='https://github.com/theatlantic/django-chosen',
+    url='https://github.com/amalysh/django-chosen',
     packages=find_packages(),
     classifiers=[
         'Environment :: Web Environment',
